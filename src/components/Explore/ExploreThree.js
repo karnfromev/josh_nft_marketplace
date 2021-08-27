@@ -205,14 +205,6 @@ class ExploreThree extends Component {
                                     <input type="radio" defaultValue="all" defaultChecked className="explore-btn" />
                                     <span>{this.state.initData.filter_1}</span>
                                 </label>
-                                <label className="btn d-table text-uppercase p-2">
-                                    <input type="radio" defaultValue="art" className="explore-btn" />
-                                    <span>{this.state.initData.filter_2}</span>
-                                </label>
-                                <label className="btn d-table text-uppercase p-2">
-                                    <input type="radio" defaultValue="music" className="explore-btn" />
-                                    <span>{this.state.initData.filter_3}</span>
-                                </label>
                             </div>
                         </div>
                     </div>

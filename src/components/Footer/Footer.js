@@ -27,14 +27,14 @@ class Footer extends Component {
         return (
             <footer className="footer-area">
                 {/* Footer Top */}
-                <div className="footer-top">
+                <div className="footer-top" style={{paddingLeft:'20%'}}>
                     <div className="container">
                         <div className="row">
                             <div className="col-12 col-sm-6 col-lg-3 res-margin">
                                 {/* Footer Items */}
                                 <div className="footer-items">
                                     {/* Logo */}
-                                    <a className="navbar-brand" href="/">
+                                    <a className="navbar-brand" href="https://www.evstudios.in">
                                         <img className="navbar-brand-sticky" src="img/josh.png" alt="sticky brand-logo" style={{height:'90px',width:'100px/'}}/>
                                         <h4 style={{fontWeight:'bold'}}>Ekanomatic V studios</h4>
                                         <h6 style={{fontWeight:'bold'}}>Gaming Redefined</h6>
@@ -77,7 +77,7 @@ class Footer extends Component {
                                 {/* Copyright Area */}
                                 <div className="copyright-area d-flex flex-wrap justify-content-center justify-content-sm-between text-center py-4">
                                     {/* Copyright Left */}
-                                    <div className="copyright-left">©2021 Ekanomatic V Studios, All Rights Reserved.</div>
+                                    <div className="copyright-left" style={{paddingLeft:'30%'}}>©2021 Ekanomatic V Studios, All Rights Reserved.</div>
                                     {/* Copyright Right */}
                                 </div>
                             </div>
