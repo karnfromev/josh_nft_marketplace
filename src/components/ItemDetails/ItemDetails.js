@@ -15,7 +15,7 @@ const initData = {
     itemOwner: "Themeland",
     created: "15 Jul 2021",
     title: "Artic Camo",
-    content: "One of only 500 in game asset collectivles. Find this NFT as a secret in josh maps.",
+    content: "One of only 500 in game asset collectibles. Find this NFT as a secret in J.O.S.H maps.",
     price_1: "1.5 ETH",
     price_2: "$500.89",
     count: "#1 / 5",
@@ -119,13 +119,13 @@ class ItemDetails extends Component {
     }
     render() {
          return (
-            <section className="item-details-area">
+            <section className="item-details-area" >
                 <div className="container">
                     <div className="row justify-content-between">
                         <div className="col-12 col-lg-5">
                             <div className="item-info">
                                 <div className="item-thumb text-center">
-                                    <img src={this.props.location.state.img} alt="" />
+                                    <img src={this.props.location.state.img} alt="" style={{height:'520px',width:'500px'}}/>
                                 </div>
                                 {console.log(this.props.location.state.url)}
                             </div>

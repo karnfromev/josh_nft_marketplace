@@ -62,8 +62,7 @@ class ExploreTwo extends Component {
                                                 </div>
                                                 <div className="card-bottom d-flex justify-content-between">
                                                     <span>{item.price}</span>
-                                                    <span>{item.count}</span>
-                                                </div>
+                                                 </div>
                                                 <a className="btn btn-bordered-white btn-smaller mt-3" href="/wallet-connect"><i className="icon-handbag mr-2" />{item.btnText}</a>
                                             </div>
                                         </div>

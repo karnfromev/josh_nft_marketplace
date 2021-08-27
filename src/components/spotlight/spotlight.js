@@ -4,6 +4,7 @@ import { withRouter} from "react-router-dom";
 
 const initData = {
     itemImg: "/img/ArticCamo.png",
+    url:"https://testnet.unique.one/token/ea674af5-2241-4f1a-988e-d36d44420b34/0xB7d3F52d828006451CE660CB6324b5f85AD26107",
     itemVid:"/img/NFT2.mp4",
     itemGif:"/img/ArticCamo.png",
     ethIcon:"/img/eth.png",
@@ -15,7 +16,7 @@ const initData = {
     itemOwner: "Themeland",
     created: "15 Jul 2021",
     title: "Artic Camo",
-    content: "One of only 500 in game asset collectivles. Find this NFT as a secret in josh maps.",
+    content: "One of only 500 in game asset collectibles. Find this NFT as a secret in J.O.S.H maps.",
     price_1: "1.5 ETH",
     price_2: "$500.89",
     count: "1 of 5",
@@ -90,8 +91,8 @@ const sellerData = [
 ]
 
 class Spotlight extends Component {
-    handleClick(img,title){
-        this.props.history.push({pathname:'/item-details',state:{img :img,title:title}})
+    handleClick(img,title,url){
+        this.props.history.push({pathname:'/item-details',state:{img :img,title:title,url:url}})
     }
     state = {
         initData: {},
@@ -143,7 +144,7 @@ class Spotlight extends Component {
                             <div className="content mt-5 mt-lg-0">
                                 <h1 style={{fontSize:'80px'}}>{this.state.initData.title}</h1>
                                 <h4 style={{color:'white'}}>{this.state.initData.content}</h4>
-                                <button className="btn btn-bordered-white btn-smaller mt-3" onClick={(e)=>this.handleClick(this.state.initData.itemGif,this.state.initData.title)}><i className="icon-handbag mr-2" />Check it Out</button>
+                                <button className="btn btn-bordered-white btn-smaller mt-3" onClick={(e)=>this.handleClick(this.state.initData.itemGif,this.state.initData.title,this.state.initData.url)}><i className="icon-handbag mr-2" />Check it Out</button>
  
                             </div>
                         </div>

@@ -47,7 +47,7 @@ const data = [
         id: "4",
         img: "/img/joshcover.gif",
         group: '["Collectibles"]',
-        title: "Josh Cover",
+        title: "J.O.S.H Cover",
         owner: "Yasmin",
         price: "1.8 ETH",
         count: "1 of 1",
@@ -69,7 +69,7 @@ const data = [
         id: "6",
         img: "/img/joshrevolution.gif",
         group: '["Collectibles"]',
-        title: "Josh Revolution",
+        title: "J.O.S.H Revolution",
         owner: "Junaid",
         price: "3.2 ETH",
         count: "1 of 1",
@@ -85,7 +85,7 @@ const data = [
         price: "3.7 ETH",
         count: "1 of 1",
         btnText: "Check it Out",
-        url:"",
+        url:"https://testnet.unique.one/profile/karn",
     },
     {
         id: "8",
@@ -163,7 +163,6 @@ class ExploreOne extends Component {
                                                 </a>
                                                 <div className="card-bottom d-flex justify-content-between">
                                                     <span>{item.price}</span>
-                                                    <span>{item.count}</span>
                                                 </div>
                                                 <button className="btn btn-bordered-white btn-smaller mt-3" onClick={(e)=>this.handleClick(item.img,item.title)}><i className="icon-handbag mr-2" />{item.btnText}</button>
                                             </div>
