@@ -2,7 +2,7 @@ import React from 'react';
 
 const Header = () => {
     return (
-        <header id="header" style={{paddingBottom:'100px'}}>
+        <header id="header" >
             {/* Navbar */}
             <nav data-aos="zoom-out" data-aos-delay={800} className="navbar navbar-expand">
                 <div className="container">

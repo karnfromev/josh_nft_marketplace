@@ -164,21 +164,7 @@ class ItemDetails extends Component {
                                 {/* Netstorm Tab */}
                                 
                                 {/* Tab Content */}
-                                <div className="tab-content" id="nav-tabContent">
-                                    <div className="tab-pane fade" id="nav-profile">
-                                        <ul className="list-unstyled">
-                                            {/* Single Tab List */}
-                                            {this.state.tabData_2.map((item, idx) => {
-                                                return (
-                                                    <li key={`tdt_${idx}`} className="single-tab-list d-flex align-items-center">
-                                                        <img className="avatar-sm rounded-circle mr-3" src={item.img} alt="" />
-                                                        <p className="m-0">Bid listed for <strong>{item.price}</strong> {item.time} <br />by <a href="/author">{item.author}</a></p>
-                                                    </li>
-                                                );
-                                            })}
-                                        </ul>
-                                    </div>
-                                </div>
+                               
                             </div>
                         </div>
                     </div>

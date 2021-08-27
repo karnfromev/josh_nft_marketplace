@@ -31,7 +31,7 @@ class Work extends Component {
                             <div className="intro mb-4">
                                 <div className="intro-content">
                                     <span></span>
-                                    <h3 className="mt-3 mb-0">We're bringing gaming enthusiasts ,crypto natives and collectors together to move the culture forward.*</h3>
+                                    <h3 className="mt-3 mb-0">We  are  bringing  gaming  enthusiasts,  crypto  natives  and  collectors  together  to  move  the  culture  forward. </h3>
                                 </div>
                             </div>
                         </div>
