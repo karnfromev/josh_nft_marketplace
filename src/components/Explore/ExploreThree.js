@@ -50,7 +50,7 @@ const data = [
         id: "4",
         img: "/img/joshcover.gif",
         group: '["Collectibles"]',
-        title: "Josh Cover",
+        title: "J.O.S.H Cover",
         owner: "Yasmin",
         price: "1.8 ETH",
         count: "1 of 1",
@@ -72,7 +72,7 @@ const data = [
         id: "6",
         img: "/img/joshrevolution.gif",
         group: '["Collectibles"]',
-        title: "Josh Revolution",
+        title: "J.O.S.H Revolution",
         owner: "Junaid",
         price: "3.2 ETH",
         count: "1 of 1",
@@ -194,8 +194,7 @@ class ExploreThree extends Component {
                             <div className="intro text-center mb-4">
                                 <span>{this.state.initData.pre_heading}</span>
                                 <h3 className="mt-3 mb-0">{this.state.initData.heading}</h3>
-                                <p>{this.state.initData.content}</p>
-                            </div>
+                             </div>
                         </div>
                     </div>
                     <div className="row justify-content-center text-center">
