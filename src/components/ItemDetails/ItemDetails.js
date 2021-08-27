@@ -127,7 +127,7 @@ class ItemDetails extends Component {
                                 <div className="item-thumb text-center">
                                     <img src={this.props.location.state.img} alt="" />
                                 </div>
-                                
+                                {console.log(this.props.location.state.url)}
                             </div>
                         </div>
                         <div className="col-12 col-lg-6">
@@ -158,7 +158,7 @@ class ItemDetails extends Component {
                             </ul>
                         </div>
                                
-                                <a className="d-block btn btn-bordered-white mt-4" href="https://testnet.unique.one/profile/karn">{this.state.initData.btnText}</a>
+                                <a className="d-block btn btn-bordered-white mt-4" href={this.props.location.state.url}>{this.state.initData.btnText}</a>
                                 
                                 
                                 {/* Netstorm Tab */}

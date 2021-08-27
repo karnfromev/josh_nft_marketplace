@@ -21,7 +21,8 @@ const data = [
         owner: "Richard",
         price: "1.5 ETH",
         count: "1 of 1",
-        btnText: "Check it Out"
+        btnText: "Check it Out",
+        url:"https://testnet.unique.one/token/69489762-e09d-4200-8d3c-639b084b7f69/0xB7d3F52d828006451CE660CB6324b5f85AD26107",
     },
     {
         id: "2",
@@ -31,7 +32,8 @@ const data = [
         owner: "Arham",
         price: "2.3 ETH",
         count: "1 of 1",
-        btnText: "Check it Out"
+        btnText: "Check it Out",
+        url:"https://testnet.unique.one/profile/karn",
     },
     {
         id: "3",
@@ -41,57 +43,63 @@ const data = [
         owner: "Yasmin",
         price: "1.8 ETH",
         count: "1 of 1",
-        btnText: "Check it Out"
+        btnText: "Check it Out",
+        url:"https://testnet.unique.one/token/862d7ae9-f623-4a6b-99e3-e021c1209288/0xB7d3F52d828006451CE660CB6324b5f85AD26107",
     },
     {
-        id: "3",
+        id: "4",
         img: "/img/joshcover.gif",
         group: '["Collectibles"]',
         title: "Josh Cover",
         owner: "Yasmin",
         price: "1.8 ETH",
         count: "1 of 1",
-        btnText: "Check it Out"
+        btnText: "Check it Out",
+        url:"https://testnet.unique.one/profile/karn",
     },
     {
-        id: "4",
+        id: "5",
         img: "/img/khrool.jpg",
         group: '["Collectibles"]',
         title: "Khrool",
         owner: "Junaid",
         price: "1.7 ETH",
         count: "1 of 1",
-        btnText: "Check it Out"
+        btnText: "Check it Out",
+        url:"https://testnet.unique.one/profile/karn",
     },
     {
-        id: "5",
+        id: "6",
         img: "/img/joshrevolution.gif",
         group: '["Collectibles"]',
         title: "Josh Revolution",
         owner: "Junaid",
         price: "3.2 ETH",
         count: "1 of 1",
-        btnText: "Check it Out"
+        btnText: "Check it Out",
+        url:"https://testnet.unique.one/token/50bb169b-595c-4e31-a9ee-a11f844b71d2/0xB7d3F52d828006451CE660CB6324b5f85AD26107",
     },
     {
-        id: "6",
+        id: "7",
         img: "/img/dock.jpg",
         group: '["Collectibles"]',
         title: "Dock",
         owner: "SpaceMan",
         price: "3.7 ETH",
         count: "1 of 1",
-        btnText: "Check it Out"
+        btnText: "Check it Out",
+        url:"",
     },
     {
-        id: "7",
+        id: "8",
         img: "/img/warehouse.jpg",
         group: '["Collectibles"]',
         title: "Warehouse",
         owner: "Victor",
         price: "4.3 ETH",
         count: "1 of 1",
-        btnText: "Check it Out"
+        btnText: "Check it Out",
+        url:"https://testnet.unique.one/profile/karn",
     },
     {
         id: "8",
@@ -101,7 +109,8 @@ const data = [
         owner: "Victor",
         price: "4.3 ETH",
         count: "1 of 1",
-        btnText: "Check it Out"
+        btnText: "Check it Out",
+        url:"https://testnet.unique.one/profile/karn",
     },
     {
         id: "9",
@@ -111,7 +120,8 @@ const data = [
         owner: "Victor",
         price: "4.3 ETH",
         count: "1 of 1",
-        btnText: "Check it Out"
+        btnText: "Check it Out",
+        url:"https://testnet.unique.one/token/4910c33b-255c-4088-8089-d4d757ccc081/0xB7d3F52d828006451CE660CB6324b5f85AD26107",
     },
     {
         id: "10",
@@ -121,7 +131,8 @@ const data = [
         owner: "Victor",
         price: "4.3 ETH",
         count: "1 of 1",
-        btnText: "Check it Out"
+        btnText: "Check it Out",
+        url:"https://testnet.unique.one/token/c562e92b-33e8-4358-ba0f-8e4363ff45bb/0xB7d3F52d828006451CE660CB6324b5f85AD26107",
     },
     {
         id: "11",
@@ -131,7 +142,8 @@ const data = [
         owner: "Victor",
         price: "4.3 ETH",
         count: "1 of 1",
-        btnText: "Check it Out"
+        btnText: "Check it Out",
+        url:"https://testnet.unique.one/token/68baaacf-da57-4e43-abbb-f6b024c5be69/0xB7d3F52d828006451CE660CB6324b5f85AD26107",
     },{
         id: "12",
         img: "/img/Patriot.png",
@@ -140,7 +152,8 @@ const data = [
         owner: "Victor",
         price: "4.3 ETH",
         count: "1 of 1",
-        btnText: "Check it Out"
+        btnText: "Check it Out",
+        url:"https://testnet.unique.one/token/aeb9cc52-d61c-4b9b-97c2-2273d0fd0db5/0xB7d3F52d828006451CE660CB6324b5f85AD26107",
     },
     {
         id: "13",
@@ -150,13 +163,14 @@ const data = [
         owner: "Victor",
         price: "4.3 ETH",
         count: "1 of 1",
-        btnText: "Check it Out"
+        btnText: "Check it Out",
+        url:"https://testnet.unique.one/token/ea674af5-2241-4f1a-988e-d36d44420b34/0xB7d3F52d828006451CE660CB6324b5f85AD26107",
     }
 ]
 
 class ExploreThree extends Component {
-    handleClick(img,title){
-        this.props.history.push({pathname:'/item-details',state:{img :img,title:title}})
+    handleClick(img,title,url){
+        this.props.history.push({pathname:'/item-details',state:{img :img,title:title,url:url}})
     }
     state = {
         initData: {},
@@ -224,7 +238,7 @@ class ExploreThree extends Component {
                                                     <span>{item.price}</span>
                                                     <span>{item.count}</span>
                                                 </div>
-                                                <button className="btn btn-bordered-white btn-smaller mt-3" onClick={(e)=>this.handleClick(item.img,item.title)}><i className="icon-handbag mr-2" />Check it Out</button>
+                                                <button className="btn btn-bordered-white btn-smaller mt-3" onClick={(e)=>this.handleClick(item.img,item.title,item.url)}><i className="icon-handbag mr-2" />Check it Out</button>
 
                                             </div>
                                         </div>
