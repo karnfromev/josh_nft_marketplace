@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import history from '../../history';
+import { withRouter} from "react-router-dom";
 
 const initData = {
     pre_heading: "Exclusive Assets",
@@ -91,6 +93,10 @@ const data = [
 ]
 
 class ExploreOne extends Component {
+    handleClick(img,title){
+        this.props.history.push({pathname:'/item-details',state:{img :img,title:title}})
+    }
+
     state = {
         initData: {},
         data: []
@@ -140,7 +146,7 @@ class ExploreOne extends Component {
                                                     <span>{item.price}</span>
                                                     <span>{item.count}</span>
                                                 </div>
-                                                <a className="btn btn-bordered-white btn-smaller mt-3" href="/item-details"><i className="icon-handbag mr-2" />{item.btnText}</a>
+                                                <button className="btn btn-bordered-white btn-smaller mt-3" onClick={(e)=>this.handleClick(item.img,item.title)}><i className="icon-handbag mr-2" />{item.btnText}</button>
                                             </div>
                                         </div>
                                     </div>
@@ -154,4 +160,4 @@ class ExploreOne extends Component {
     }
 }
 
-export default ExploreOne;
+export default withRouter(ExploreOne);

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link, Switch, Route, useHistory, useLocation } from "react-router-dom";
+import { withRouter} from "react-router-dom";
 
 
 const initData = {
@@ -90,6 +90,9 @@ const sellerData = [
 ]
 
 class Spotlight extends Component {
+    handleClick(img,title){
+        this.props.history.push({pathname:'/item-details',state:{img :img,title:title}})
+    }
     state = {
         initData: {},
         tabData_1: [],
@@ -140,7 +143,8 @@ class Spotlight extends Component {
                             <div className="content mt-5 mt-lg-0">
                                 <h1 style={{fontSize:'80px'}}>{this.state.initData.title}</h1>
                                 <h4 style={{color:'white'}}>{this.state.initData.content}</h4>
-                               <a className="btn btn-bordered-white btn-smaller mt-3" href='/item-details'><i className="icon-handbag mr-2" />Check it Out</a>
+                                <button className="btn btn-bordered-white btn-smaller mt-3" onClick={(e)=>this.handleClick(this.state.initData.itemGif,this.state.initData.title)}><i className="icon-handbag mr-2" />Check it Out</button>
+ 
                             </div>
                         </div>
                         
@@ -151,4 +155,4 @@ class Spotlight extends Component {
     }
 }
 
-export default Spotlight;
+export default withRouter(Spotlight);

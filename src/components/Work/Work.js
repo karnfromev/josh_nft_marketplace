@@ -31,7 +31,7 @@ class Work extends Component {
                                     <span style={{fontSize:'120px'}}>{this.state.data.preHeading}</span>
                                     <h2 className="mt-3 mb-0" style={{fontSize:'80px'}}>{this.state.data.heading}</h2>
                                     <h3 className="mt-3 mb-0" style={{fontSize:'55px'}}>Collect from a wide range of Gaming assets as well as Collectibles now available as NFTs</h3>
-                                    <h4 className="mt-3 mb-0" style={{fontSize:'35px'}}>Use them in the Game just by connecting to your wallet</h4>
+                                    <h4 className="mt-3 mb-0" style={{fontSize:'35px'}}>Use them in the J.O.S.H just by connecting to your wallet to it!*</h4>
                                     <h2></h2>
                                 </div>
                             </div>

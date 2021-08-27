@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link, Switch, Route, useHistory, useLocation } from "react-router-dom";
+import {  withRouter } from "react-router-dom";
 
 
 const initData = {
@@ -9,16 +9,6 @@ const initData = {
     filter_1: "All",
     filter_2: "Gaming Assets",
     filter_3: "Collectibles",
-}
-const handleEnrollCoursePage = (img,title) => { 
-    this.props.history.push({
-       pathname:"/item-details",
-       state:{
-           title:title,
-           img:img
-       },
-   })
-
 }
 
 
@@ -165,6 +155,9 @@ const data = [
 ]
 
 class ExploreThree extends Component {
+    handleClick(img,title){
+        this.props.history.push({pathname:'/item-details',state:{img :img,title:title}})
+    }
     state = {
         initData: {},
         data: []
@@ -231,7 +224,7 @@ class ExploreThree extends Component {
                                                     <span>{item.price}</span>
                                                     <span>{item.count}</span>
                                                 </div>
-                                                <a className="btn btn-bordered-white btn-smaller mt-3" href="/item-details"><i className="icon-handbag mr-2" />{item.btnText}</a>
+                                                <button className="btn btn-bordered-white btn-smaller mt-3" onClick={(e)=>this.handleClick(item.img,item.title)}><i className="icon-handbag mr-2" />Check it Out</button>
 
                                             </div>
                                         </div>
@@ -246,4 +239,4 @@ class ExploreThree extends Component {
     }
 }
 
-export default ExploreThree;
+export default withRouter(ExploreThree);

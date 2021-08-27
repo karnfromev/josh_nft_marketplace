@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
- 
+import { withRouter,useLocation} from "react-router-dom";
 import axios from 'axios';
 
 const BASE_URL = "https://my-json-server.typicode.com/themeland/netstorm-json-2/sidebar";
@@ -119,14 +118,14 @@ class ItemDetails extends Component {
         .catch(err => console.log(err))
     }
     render() {
-        return (
+         return (
             <section className="item-details-area">
                 <div className="container">
                     <div className="row justify-content-between">
                         <div className="col-12 col-lg-5">
                             <div className="item-info">
                                 <div className="item-thumb text-center">
-                                    <img src={this.state.initData.itemImg} alt="" />
+                                    <img src={this.props.location.state.img} alt="" />
                                 </div>
                                 
                             </div>
@@ -134,7 +133,7 @@ class ItemDetails extends Component {
                         <div className="col-12 col-lg-6">
                             {/* Content */}
                             <div className="content mt-5 mt-lg-0">
-                                <h1 className="m-0">{this.state.initData.title}</h1>
+                                <h1 className="m-0">{this.props.location.state.title}</h1>
                                  <p>{this.state.initData.content}</p>
                                 {/* Owner */}
                                 
@@ -143,9 +142,6 @@ class ItemDetails extends Component {
                                     <ul className="list-unstyled">
                                         <li className="price d-flex justify-content-between">
                                             <h5>Current Price {this.state.initData.price_1}</h5>
-                                        </li>
-                                        <li><h3>Volume Traded </h3>
-                                            <h6>{this.state.initData.volume}</h6>
                                         </li>
                                     </ul>
                                 </div>
@@ -162,7 +158,7 @@ class ItemDetails extends Component {
                             </ul>
                         </div>
                                
-                                <a className="d-block btn btn-bordered-white mt-4" href="https://testnet.unique.one/token/ea674af5-2241-4f1a-988e-d36d44420b34/0xC149A6e119856c7d3525aA9f8BaB070bbFf5ffE7">{this.state.initData.btnText}</a>
+                                <a className="d-block btn btn-bordered-white mt-4" href="https://testnet.unique.one/profile/karn">{this.state.initData.btnText}</a>
                                 
                                 
                                 {/* Netstorm Tab */}
@@ -192,4 +188,4 @@ class ItemDetails extends Component {
     }
 }
 
-export default ItemDetails;
+export default withRouter(ItemDetails);
