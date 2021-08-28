@@ -169,8 +169,8 @@ const data = [
 ]
 
 class ExploreThree extends Component {
-    handleClick(img,title,url){
-        this.props.history.push({pathname:'/item-details',state:{img :img,title:title,url:url}})
+    handleClick(img,title,url,price){
+        this.props.history.push({pathname:'/item-details',state:{img :img,title:title,url:url,price}})
     }
     state = {
         initData: {},
@@ -229,7 +229,7 @@ class ExploreThree extends Component {
                                                     <span>{item.price}</span>
                                                     <span>{item.count}</span>
                                                 </div>
-                                                <button className="btn btn-bordered-white btn-smaller mt-3" onClick={(e)=>this.handleClick(item.img,item.title,item.url)}><i className="icon-handbag mr-2" />Check it Out</button>
+                                                <button className="btn btn-bordered-white btn-smaller mt-3" onClick={(e)=>this.handleClick(item.img,item.title,item.url,item.price)}><i className="icon-handbag mr-2" />Check it Out</button>
 
                                             </div>
                                         </div>

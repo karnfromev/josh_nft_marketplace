@@ -112,8 +112,8 @@ const data = [
 ]
 
 class ExploreOne extends Component {
-    handleClick(img,title){
-        this.props.history.push({pathname:'/item-details',state:{img :img,title:title}})
+    handleClick(img,title,url,price){
+        this.props.history.push({pathname:'/item-details',state:{img :img,title:title,url:url,price}})
     }
 
     state = {
@@ -164,7 +164,7 @@ class ExploreOne extends Component {
                                                 <div className="card-bottom d-flex justify-content-between">
                                                     <span>{item.price}</span>
                                                 </div>
-                                                <button className="btn btn-bordered-white btn-smaller mt-3" onClick={(e)=>this.handleClick(item.img,item.title)}><i className="icon-handbag mr-2" />{item.btnText}</button>
+                                                <button className="btn btn-bordered-white btn-smaller mt-3" onClick={(e)=>this.handleClick(item.img,item.title,item.url,item.price)}><i className="icon-handbag mr-2" />{item.btnText}</button>
                                             </div>
                                         </div>
                                     </div>

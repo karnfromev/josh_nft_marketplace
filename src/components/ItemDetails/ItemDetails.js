@@ -141,7 +141,7 @@ class ItemDetails extends Component {
                                 <div className="item-info-list mt-4">
                                     <ul className="list-unstyled">
                                         <li className="price d-flex justify-content-between">
-                                            <h5>Current Price {this.state.initData.price_1}</h5>
+                                            <h5>Current Price {this.props.location.state.price}</h5>
                                         </li>
                                     </ul>
                                 </div>
@@ -156,7 +156,7 @@ class ItemDetails extends Component {
                                     );
                                 })}
                             </ul>
-                        </div>
+                                    </div>
                                
                                 <a className="d-block btn btn-bordered-white mt-4" href={this.props.location.state.url}>{this.state.initData.btnText}</a>
                                 
